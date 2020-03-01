@@ -1,0 +1,20 @@
+type Task {
+  id: ID!
+  text: String!
+  done: Boolean!
+}
+
+type Query {
+    listTasks: [Task!]!
+}
+
+input addTaskInput {
+  text: String!
+}
+union addTaskPayload = Task
+union doneTaskPayload = Task
+
+type Mutation {
+    addTask(input: addTaskInput!): addTaskPayload!
+    doneTask(id: ID!): Boolean!
+}
