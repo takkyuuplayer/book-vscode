@@ -1,5 +1,5 @@
 overwrite: true
-schema: "schema.graphql"
+schema: "src/graphql/schema.graphql"
 documents: null
 generates:
   src/server/generated/graphql.ts:
@@ -9,6 +9,3 @@ generates:
       - add: "/* eslint-disable */"
       - "typescript"
       - "typescript-resolvers"
-  ./graphql.schema.json:
-    plugins:
-      - "introspection"
