@@ -3,6 +3,8 @@ schema: "schema.graphql"
 documents: null
 generates:
   src/server/generated/graphql.ts:
+    config:
+      contextType: "../types#IContext"
     plugins:
       - add: "/* eslint-disable */"
       - "typescript"

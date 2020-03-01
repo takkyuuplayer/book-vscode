@@ -1,6 +1,6 @@
 type Task {
   id: ID!
-  todo: String!
+  text: String!
   done: Boolean!
 }
 
@@ -9,10 +9,12 @@ type Query {
 }
 
 input addTaskInput {
-  todo: String!
+  text: String!
 }
 union addTaskPayload = Task
+union doneTaskPayload = Task
 
 type Mutation {
-    addTask(input: addTaskInput): addTaskPayload!
+    addTask(input: addTaskInput!): addTaskPayload!
+    doneTask(id: ID!): doneTaskPayload!
 }

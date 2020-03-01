@@ -65,7 +65,7 @@
             "deprecationReason": null
           },
           {
-            "name": "todo",
+            "name": "text",
             "description": "",
             "args": [],
             "type": {
@@ -145,9 +145,13 @@
                 "name": "input",
                 "description": "",
                 "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "addTaskInput",
-                  "ofType": null
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "addTaskInput",
+                    "ofType": null
+                  }
                 },
                 "defaultValue": null
               }
@@ -158,6 +162,37 @@
               "ofType": {
                 "kind": "UNION",
                 "name": "addTaskPayload",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "doneTask",
+            "description": "",
+            "args": [
+              {
+                "name": "id",
+                "description": "",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "ID",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "UNION",
+                "name": "doneTaskPayload",
                 "ofType": null
               }
             },
@@ -177,7 +212,7 @@
         "fields": null,
         "inputFields": [
           {
-            "name": "todo",
+            "name": "text",
             "description": "",
             "type": {
               "kind": "NON_NULL",
@@ -198,6 +233,22 @@
       {
         "kind": "UNION",
         "name": "addTaskPayload",
+        "description": "",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "Task",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "doneTaskPayload",
         "description": "",
         "fields": null,
         "inputFields": null,
