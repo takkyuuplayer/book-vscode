@@ -5,7 +5,9 @@
   "author": "",
   "scripts": {
     "codegen": "graphql-codegen --config codegen.yml",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run test:lint && jest",
+    "test:lint": "eslint src/**/*.ts",
+    "lint": "eslint --fix src/**/*.ts"
   },
   "main": "index.js",
   "dependencies": {
