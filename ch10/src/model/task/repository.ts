@@ -27,4 +27,11 @@ export class Repository {
   public ListTasks(): ITask[] {
     return this.tasks.filter(task => !task.done);
   }
+  public DoneTask(id: number) {
+    this.tasks.forEach(task => {
+      if (task.id === id) {
+        task.done = true;
+      }
+    });
+  }
 }
