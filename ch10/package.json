@@ -2,14 +2,15 @@
   "name": "ch10",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "codegen": "graphql-codegen --config codegen.yml"
-  },
-  "keywords": [],
   "author": "",
-  "license": "ISC",
+  "scripts": {
+    "codegen": "graphql-codegen --config codegen.yml",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "vue-apollo": "^3.0.0-beta.11"
+  },
   "devDependencies": {
     "@graphql-codegen/add": "^1.12.2",
     "@graphql-codegen/cli": "^1.12.2",
@@ -26,6 +27,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-vue": "^6.2.1",
     "graphql": "^14.6.0",
+    "graphql-tag": "^2.9.0",
     "jest": "^25.1.0",
     "mocha": "^7.1.0",
     "prettier": "^1.19.1",
@@ -36,8 +38,11 @@
     "typescript": "^3.8.3",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
+    "vue-cli-plugin-apollo": "~0.21.3",
     "vue-property-decorator": "^8.4.0",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11"
-  }
+  },
+  "keywords": [],
+  "license": "ISC"
 }
