@@ -16,5 +16,5 @@ union doneTaskPayload = Task
 
 type Mutation {
     addTask(input: addTaskInput!): addTaskPayload!
-    doneTask(id: ID!): doneTaskPayload!
+    doneTask(id: ID!): Boolean!
 }
