@@ -11,7 +11,7 @@ describe("src/model/task/task", () => {
   it("should add a new task", () => {
     const repo = new Repository();
     const newTask: ITask = {
-      id: 0,
+      id: "0",
       text: "New Task"
     };
     repo.AddTask(newTask);
@@ -25,10 +25,12 @@ describe("src/model/task/task", () => {
   });
   it("should mark a task done", () => {
     const repo = new Repository();
-    repo.DoneTask(1);
+    repo.DoneTask("1");
     const tasks = repo.ListTasks();
 
     expect(tasks.length).toBe(1);
-    expect(tasks.find((task: ITask): boolean => task.id === 1)).toBeUndefined();
+    expect(
+      tasks.find((task: ITask): boolean => task.id === "1")
+    ).toBeUndefined();
   });
 });
