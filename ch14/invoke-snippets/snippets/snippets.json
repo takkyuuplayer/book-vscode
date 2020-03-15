@@ -1,0 +1,13 @@
+{
+    "invoke-init": {
+        "prefix": "invoke-init",
+        "body": [
+            "from invoke import task",
+            "",
+            "@task",
+            "def ${1:task}(c):",
+            "   $0"
+        ],
+        "description": "init invoke"
+    }
+}
